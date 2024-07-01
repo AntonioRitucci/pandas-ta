@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .sma import sma
+from pandas_ta.overlap.sma import sma
 from pandas_ta import Imports
 from pandas_ta.utils import get_offset, verify_series
 

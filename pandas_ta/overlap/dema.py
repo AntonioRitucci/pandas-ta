@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .ema import ema
+from pandas_ta.overlap.ema import ema
 from pandas_ta import Imports
 from pandas_ta.utils import get_offset, verify_series
 

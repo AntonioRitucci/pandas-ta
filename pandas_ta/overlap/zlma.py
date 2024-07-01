@@ -1,7 +1,16 @@
 # -*- coding: utf-8 -*-
-from . import (
-    dema, ema, hma, linreg, rma, sma, swma, t3, tema, trima, vidya, wma
-)
+from pandas_ta.overlap.dema import dema
+from pandas_ta.overlap.ema import ema
+from pandas_ta.overlap.hma import hma
+from pandas_ta.overlap.sma import sma
+from pandas_ta.overlap.swma import swma
+from pandas_ta.overlap.t3 import t3
+from pandas_ta.overlap.tema import tema
+from pandas_ta.overlap.trima import trima
+from pandas_ta.overlap.vidya import vidya
+from pandas_ta.overlap.wma import wma
+from pandas_ta.overlap.rma import rma
+from pandas_ta.overlap.linreg import linreg
 from pandas_ta.utils import get_offset, verify_series
 
 
@@ -14,7 +23,7 @@ def zlma(close, length=None, mamode=None, offset=None, **kwargs):
     offset = get_offset(offset)
 
     if close is None: return
-
+    
     # Calculate Result
     lag = int(0.5 * (length - 1))
     close_ = 2 * close - close.shift(lag)
